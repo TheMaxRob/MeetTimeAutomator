@@ -1,0 +1,48 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MeetTimeAutomator</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f0f0f0;
+      }
+      #availability {
+        background: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      button {
+        margin-top: 10px;
+        padding: 10px 20px;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="availability">
+      <h2>Available Times</h2>
+      <p id="times">Press the button to fetch available times.</p>
+      <button onclick="fetchAvailability()">Get Availability</button>
+    </div>
+    <script>
+      function fetchAvailability() {
+        window.api.fetchAvailability().then((result) => {
+          // Display the result in the 'times' paragraph
+          document.getElementById('times').innerText = 'Fetching availability...';
+          // Handle result to update the UI with available times
+          // This is a placeholder; replace with your logic to handle and display the fetched times
+        });
+      }
+    </script>
+  </body>
+</html>
