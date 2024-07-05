@@ -32,17 +32,8 @@
     <div id="availability">
       <h2>Available Times</h2>
       <p id="times">Press the button to fetch available times.</p>
-      <button onclick="fetchAvailability()">Get Availability</button>
+      <button id="fetch-availability">Get Availability</button>
     </div>
-    <script>
-      function fetchAvailability() {
-        window.api.fetchAvailability().then((result) => {
-          // Display the result in the 'times' paragraph
-          document.getElementById('times').innerText = 'Fetching availability...';
-          // Handle result to update the UI with available times
-          // This is a placeholder; replace with your logic to handle and display the fetched times
-        });
-      }
-    </script>
+    <script></script>
   </body>
 </html>
